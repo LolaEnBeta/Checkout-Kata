@@ -14,7 +14,19 @@ while n > 0:
     if select_item not in items:
         print("We don't have this yet, sorry!")
         checkout.remove(select_item)
-    
 
-        
 print("You choose this these items:", checkout)
+
+price_list = list()
+for item in checkout:
+    if item == "A":
+        price_list.append(50)
+    if item == "B":
+        price_list.append(30)
+    if item == "C":
+        price_list.append(20)
+    if item == "D":
+        price_list.append(15)
+
+
+print ("Total to pay:", price_list)
