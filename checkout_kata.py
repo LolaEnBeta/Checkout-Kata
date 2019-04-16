@@ -28,5 +28,5 @@ for item in checkout:
     if item == "D":
         price_list.append(15)
 
-
-print ("Total to pay:", price_list)
+total_price = sum(price_list)
+print ("Total to pay:", total_price)
