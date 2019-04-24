@@ -15,10 +15,18 @@ while selected_product != "":
     print(selected_products)
     selected_product = input ("Select one item from de list: ")
 
-total_price = 0
+count_A = 0
 for product in selected_products:
-    price = products[product]
-    total_price += price
+    if product == "A":
+        count_A += 1
 
-print(selected_products)
-print("Total to pay: ", total_price)
+total_price = 0
+while count_A > 0:
+    if count_A >= 3:
+        total_price += 130
+        count_A -= 3
+    else:
+        total_price += count_A * 50
+        count_A = 0
+
+print(total_price)  
