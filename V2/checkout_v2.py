@@ -36,15 +36,15 @@ while count_A > 0:
         total_price += 130
         count_A -= 3
     else:
-        total_price += count_A * 50
+        total_price += count_A * products["A"]
         count_A = 0
 while count_B > 0:
     if count_B >= 2:
         total_price += 45
         count_B -= 2
     else:
-        total_price += count_B * 30
+        total_price += count_B * products["B"]
         count_B = 0
-total_price = (count_C * 20) + (count_D * 15)
+total_price += (count_C * products["C"]) + (count_D * products["D"])
 
 print(total_price)  
