@@ -15,11 +15,10 @@ while selected_product != "":
     print(selected_products)
     selected_product = input ("Select one item from de list: ")
 
-checkout = []
-
+total_price = 0
 for product in selected_products:
-    prices = products[product]
-    checkout.append(prices)
+    price = products[product]
+    total_price += price
 
 print(selected_products)
-print("Total to pay: ", sum(checkout))
+print("Total to pay: ", total_price)
