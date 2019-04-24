@@ -5,6 +5,8 @@
 """
 
 products = {"A": 50, "B": 30, "C": 20, "D": 15}
+offers = {"A": 130, "B": 45}
+
 print(products)
 
 selected_products = []
@@ -33,14 +35,14 @@ for product in selected_products:
 total_price = 0
 while count_A > 0:
     if count_A >= 3:
-        total_price += 130
+        total_price += offers["A"]
         count_A -= 3
     else:
         total_price += count_A * products["A"]
         count_A = 0
 while count_B > 0:
     if count_B >= 2:
-        total_price += 45
+        total_price += offers["B"]
         count_B -= 2
     else:
         total_price += count_B * products["B"]
