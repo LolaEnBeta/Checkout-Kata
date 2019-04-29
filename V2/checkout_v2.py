@@ -3,6 +3,12 @@
     c=20
     D=15
 """
+def user_select_a_product(selected_product):
+    while selected_product != "":
+        selected_products.append(selected_product)
+        print(selected_products)
+        selected_product = input ("Select one item from de list: ")
+    return selected_products
 
 products = {"A": 50, "B": 30, "C": 20, "D": 15}
 offers = {"A": 130, "B": 45}
@@ -11,11 +17,7 @@ print(products)
 
 selected_products = []
 selected_product = input ("Select one item from de list: ")
-
-while selected_product != "":
-    selected_products.append(selected_product)
-    print(selected_products)
-    selected_product = input ("Select one item from de list: ")
+user_select_a_product(selected_product)
 
 count_A = 0
 count_B = 0
