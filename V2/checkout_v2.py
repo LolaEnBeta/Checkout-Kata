@@ -10,6 +10,34 @@ def user_select_a_product(selected_product):
         selected_product = input ("Select one item from de list: ")
     return selected_products
 
+def counting_A(selected_products):
+    count_A = 0
+    for product in selected_products:
+        if product == "A":
+            count_A += 1
+    return count_A
+
+def counting_B(selected_products):
+    count_B = 0
+    for product in selected_products:
+        if product == "B":
+            count_B += 1
+    return count_B
+
+def counting_C(selected_products):
+    count_C = 0
+    for product in selected_products:
+        if product == "C":
+            count_C += 1
+    return count_C
+
+def counting_D(selected_products):
+    count_D = 0
+    for product in selected_products:
+        if product == "D":
+            count_D += 1
+    return count_D
+
 def calculating_total_price(count_A, count_B, count_C, count_D, products, offers):
     total_price = 0
     while count_A > 0:
@@ -38,19 +66,10 @@ selected_products = []
 selected_product = input ("Select one item from de list: ")
 user_select_a_product(selected_product)
 
-count_A = 0
-count_B = 0
-count_C = 0
-count_D = 0
-for product in selected_products:
-    if product == "A":
-        count_A += 1
-    elif product == "B":
-        count_B += 1
-    elif product == "C":
-        count_C += 1
-    elif product == "D":
-        count_D += 1
+count_A = counting_A(selected_products)
+count_B = counting_B(selected_products)
+count_C = counting_C(selected_products)
+count_D = counting_D(selected_products)
 
 print("Total price:", calculating_total_price(count_A, count_B, count_C, count_D, products, offers))
   
