@@ -71,5 +71,7 @@ count_B = counting_B(selected_products)
 count_C = counting_C(selected_products)
 count_D = counting_D(selected_products)
 
-print("Total price:", calculating_total_price(count_A, count_B, count_C, count_D, products, offers))
+total_price = calculating_total_price(count_A, count_B, count_C, count_D, products, offers)
+
+print("Total price:", total_price)
   
