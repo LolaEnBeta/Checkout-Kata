@@ -10,3 +10,7 @@ def sum_checkout(items):
     for item in items:
         total_price += item
     return total_price
+
+def sum_checkout_items_from_dictionary(items):
+    total_price = items["A"] + items["B"]
+    return total_price
