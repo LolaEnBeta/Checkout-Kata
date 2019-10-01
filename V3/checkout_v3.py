@@ -6,5 +6,7 @@
 items = [50, 30]
 
 def sum_checkout(items):
-    total_price = (items[0] + items[1])
+    total_price = 0
+    for item in items:
+        total_price += item
     return total_price
