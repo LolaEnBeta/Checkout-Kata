@@ -8,7 +8,9 @@ class TestCheckout(unittest.TestCase):
         self.assertEqual(sum_checkout(items), 80)
 
     def test_sum_checkout_items_dictionary(self):
-        pass
+        items = {"A": 50, "B": 30}
+        total_price = items["A"] + items["B"]
+        self.assertEqual(total_price, 80)
 
 if __name__ == '__main__':
     unittest.main()
