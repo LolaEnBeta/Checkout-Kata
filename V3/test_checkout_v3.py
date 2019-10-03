@@ -33,6 +33,7 @@ class TestCheckout(unittest.TestCase):
         cart = Cart()
         cart.add_item("A")
         cart.add_item("A")
+        cart.list_total_items()
 
         offers = {
             "A": {
