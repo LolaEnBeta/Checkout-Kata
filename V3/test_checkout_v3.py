@@ -9,7 +9,10 @@ class TestCheckout(unittest.TestCase):
         self.assertEqual(items, [])
 
     def test_list_total_items(self):
-        return
+        cart = Cart()
+        cart.add_item("A")
+        items = cart.list_total_items()
+        self.assertEqual(items, {"A":1})
 
     def test_add_item(self):
         cart = Cart()
