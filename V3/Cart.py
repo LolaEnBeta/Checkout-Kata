@@ -5,3 +5,6 @@ class Cart():
 
     def add_to_items_list(self, item):
         self.items.append(item)
+
+    def list_items(self):
+        return self.items
