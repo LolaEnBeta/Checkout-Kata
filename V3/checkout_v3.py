@@ -22,6 +22,9 @@ cart = Cart()
 finish = False
 
 while finish != True:
+    print("")
+    print(prices)
+    print("")
     item = input("Select an item or writte exit to finish: ")
 
     if item in prices:
