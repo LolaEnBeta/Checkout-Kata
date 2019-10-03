@@ -5,8 +5,9 @@ class TestCheckout(unittest.TestCase):
 
     def test_list_items(self):
         cart = Cart()
+        cart.add_item("A")
         items = cart.list_items()
-        self.assertEqual(items, [])
+        self.assertEqual(items, {"A":1})
 
     def test_add_item(self):
         cart = Cart()
