@@ -17,10 +17,11 @@ class TestCheckout(unittest.TestCase):
     def test_sum_items(self):
         cart = Cart()
         cart.add_item("A")
+        cart.add_item("B")
 
-        prices = {"A": 50}
+        prices = {"A": 50, "B": 30}
         total_price = cart.sum_items(prices)
-        self.assertEqual(total_price, 50)
+        self.assertEqual(total_price, 80)
 
 if __name__ == '__main__':
     unittest.main()
