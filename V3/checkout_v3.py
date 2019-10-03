@@ -17,4 +17,6 @@ while finish != True:
     if item in prices:
         cart.add_item(item)
     elif item == "exit":
+        total_price = cart.sum_items(prices)
+        print("Total to pay: ", total_price)
         finish = True
