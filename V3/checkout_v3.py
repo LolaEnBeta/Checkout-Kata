@@ -28,13 +28,16 @@ def start_buying():
         if item in prices:
             cart.add_item(item)
         elif item == "exit":
-            item = cart.list_total_items()
-            cart.check_offers(offers)
-            total_price = cart.sum_items(prices)
-            print("Total to pay: ", total_price)
+            finish_buying()
             finish = True
         else:
             print("We don't have this item. Please, try again =)")
+
+def finish_buying():
+    item = cart.list_total_items()
+    cart.check_offers(offers)
+    total_price = cart.sum_items(prices)
+    print("Total to pay: ", total_price)
 
 cart = Cart()
 start_buying()
