@@ -12,3 +12,7 @@ cart = Cart()
 finish = False
 
 while finish != True:
+    item = input("Select an item or writte exit to finish: ")
+
+    if item in prices:
+        cart.add_item(item)
