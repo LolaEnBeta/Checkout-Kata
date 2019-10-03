@@ -8,3 +8,6 @@ class Cart():
 
     def list_items(self):
         return self.items
+
+    def sum_items(prices):
+        return
