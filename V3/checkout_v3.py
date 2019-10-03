@@ -17,23 +17,24 @@ offers = {
     }
 }
 
+def start_buying():
+    finish = False
+    while finish != True:
+        print("")
+        print(prices)
+        print("")
+        item = input("Select an item or writte exit to finish: ")
+
+        if item in prices:
+            cart.add_item(item)
+        elif item == "exit":
+            item = cart.list_total_items()
+            cart.check_offers(offers)
+            total_price = cart.sum_items(prices)
+            print("Total to pay: ", total_price)
+            finish = True
+        else:
+            print("We don't have this item. Please, try again =)")
+
 cart = Cart()
-
-finish = False
-
-while finish != True:
-    print("")
-    print(prices)
-    print("")
-    item = input("Select an item or writte exit to finish: ")
-
-    if item in prices:
-        cart.add_item(item)
-    elif item == "exit":
-        item = cart.list_total_items()
-        cart.check_offers(offers)
-        total_price = cart.sum_items(prices)
-        print("Total to pay: ", total_price)
-        finish = True
-    else:
-        print("We don't have this item. Please, try again =)")
+start_buying()
