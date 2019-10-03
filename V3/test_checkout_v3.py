@@ -30,7 +30,20 @@ class TestCheckout(unittest.TestCase):
         self.assertEqual(total_price, 80)
 
     def test_check_offers(self):
-        return
+        cart = Cart()
+        cart.add_item("A")
+        cart.add_item("A")
+
+        offers = {
+            "A": {
+                "units": 2,
+                "price": 95
+            }
+        }
+
+        total_price_offers = cart.check_offers(offers)
+
+        self.assertEqual(total_price_offers, 95)
 
 if __name__ == '__main__':
     unittest.main()
