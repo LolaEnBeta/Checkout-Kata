@@ -12,6 +12,12 @@ class Cart():
         return self.items
 
     def list_total_items(self):
+        for item in self.items:
+            if item in self.total_items:
+                self.total_items[item] += 1
+            else:
+                self.total_items[item] = 1
+        return self.total_items
 
     def sum_items(self, prices):
         for item in self.items:
