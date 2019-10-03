@@ -31,5 +31,5 @@ class Cart():
     def sum_items(self, prices):
         for item in self.total_items:
             if item in prices:
-                self.total_price += prices.get(item)
+                self.total_price += (prices.get(item)*self.total_items[item])
         return self.total_price
