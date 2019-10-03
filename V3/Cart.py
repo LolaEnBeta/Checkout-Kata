@@ -19,6 +19,9 @@ class Cart():
                 self.total_items[item] = 1
         return self.total_items
 
+    def check_offers(self, offers):
+        return
+
     def sum_items(self, prices):
         for item in self.items:
             if item in prices:
