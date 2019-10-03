@@ -20,3 +20,5 @@ while finish != True:
         total_price = cart.sum_items(prices)
         print("Total to pay: ", total_price)
         finish = True
+    else:
+        print("We don't have this item. Please, try again =)")
