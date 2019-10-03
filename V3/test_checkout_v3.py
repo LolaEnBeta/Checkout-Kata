@@ -24,6 +24,7 @@ class TestCheckout(unittest.TestCase):
         cart = Cart()
         cart.add_item("A")
         cart.add_item("B")
+        cart.list_total_items()
 
         prices = {"A": 50, "B": 30}
         total_price = cart.sum_items(prices)
