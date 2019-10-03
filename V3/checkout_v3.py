@@ -16,3 +16,5 @@ while finish != True:
 
     if item in prices:
         cart.add_item(item)
+    elif item == "exit":
+        finish = True
