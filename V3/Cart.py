@@ -9,5 +9,5 @@ class Cart():
     def list_items(self):
         return self.items
 
-    def sum_items(prices):
+    def sum_items(self, prices):
         return
