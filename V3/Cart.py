@@ -20,7 +20,13 @@ class Cart():
         return self.total_items
 
     def check_offers(self, offers):
-        return
+        total_items = self.total_items
+        for item in total_items:
+            if item in offers:
+                while self.total_items[item] >= offers[item]["units"]:
+                    self.total_price += offers[item]["price"]
+                    self.total_items[item] -= offers[item]["units"]
+        return self.total_price
 
     def sum_items(self, prices):
         for item in self.items:
