@@ -6,6 +6,16 @@ from Cart import Cart
 # D = 15
 
 prices = {"A": 50, "B": 30, "C": 20, "D": 15}
+offers = {
+    "A": {
+        "units": 3,
+        "price": 130
+    },
+    "B": {
+        "units": 2,
+        "price": 45
+    }
+}
 
 cart = Cart()
 
