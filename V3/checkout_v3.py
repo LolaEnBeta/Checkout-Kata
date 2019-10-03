@@ -22,7 +22,6 @@ def start_buying():
     while finish != True:
         print("")
         print(prices)
-        print("")
         item = input("Select an item or writte exit to finish: ")
 
         if item in prices:
@@ -34,10 +33,13 @@ def start_buying():
             print("We don't have this item. Please, try again =)")
 
 def finish_buying():
+    total_price = calculate_total_price()
+    print("Total to pay: ", total_price)
+
+def calculate_total_price():
     item = cart.list_total_items()
     cart.check_offers(offers)
-    total_price = cart.sum_items(prices)
-    print("Total to pay: ", total_price)
+    return cart.sum_items(prices)
 
 cart = Cart()
 start_buying()
