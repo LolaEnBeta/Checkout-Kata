@@ -25,7 +25,7 @@ def start_buying():
         item = input("Select an item or writte exit to finish: ")
 
         if item in prices:
-            cart.add_item(item)
+            cart.add(item)
         elif item == "exit":
             finish_buying()
             finish = True
@@ -39,7 +39,7 @@ def finish_buying():
 def calculate_total_price():
     item = cart.list_total_items()
     cart.check_offers(offers)
-    return cart.sum_items(prices)
+    return cart.calculate_total_price(prices)
 
 cart = Cart()
 start_buying()
