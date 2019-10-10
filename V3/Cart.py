@@ -19,6 +19,7 @@ class Cart():
                 self.total_items[item] = 1
 
     def check_offers(self, offers):
+        self.list_total_items()
         total_items = self.total_items
         for item in total_items:
             if item in offers:
@@ -27,7 +28,6 @@ class Cart():
                     self.total_items[item] -= offers[item]["units"]
 
     def calculate_total_price(self, offers, prices):
-        self.list_total_items()
         self.check_offers(offers)
         for item in self.total_items:
             if item in prices:
