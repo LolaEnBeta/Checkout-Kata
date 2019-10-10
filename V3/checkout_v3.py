@@ -33,13 +33,7 @@ def start_buying():
             print("We don't have this item. Please, try again =)")
 
 def finish_buying():
-    total_price = calculate_total_price()
-    print("Total to pay: ", total_price)
-
-def calculate_total_price():
-    item = cart.list_total_items()
-    cart.check_offers(offers)
-    return cart.calculate_total_price(prices)
+    print("Total to pay: ", cart.calculate_total_price(offers, prices))
 
 cart = Cart()
 start_buying()
